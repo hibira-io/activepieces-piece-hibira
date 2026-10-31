@@ -1,6 +1,6 @@
 {
   "name": "@hibira-io/piece-hibira",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Hibira piece for Activepieces: realtime events, presence, push notifications and a webhook trigger",
   "keywords": [
     "activepieces",
