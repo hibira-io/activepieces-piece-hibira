@@ -1,5 +1,7 @@
 # Hibira piece for Activepieces
 
+![Hibira piece for Activepieces](.github/cover.jpg)
+
 [Hibira](https://hibira.io) is a hosted realtime service that speaks the Pusher Channels and Beams protocols: WebSocket channels, presence and push notifications. This package adds Hibira to [Activepieces](https://www.activepieces.com) as a custom piece.
 
 ## Install
