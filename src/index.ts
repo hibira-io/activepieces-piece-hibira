@@ -2,11 +2,13 @@ import { createPiece } from '@activepieces/pieces-framework';
 import { PieceCategory } from '@activepieces/shared';
 import { hibiraAuth } from './lib/auth';
 import { deletePushUser } from './lib/actions/delete-push-user';
+import { getApproval } from './lib/actions/get-approval';
 import { getChannel } from './lib/actions/get-channel';
 import { getPresenceUsers } from './lib/actions/get-presence-users';
 import { listChannels } from './lib/actions/list-channels';
 import { publishToInterests } from './lib/actions/publish-to-interests';
 import { publishToUsers } from './lib/actions/publish-to-users';
+import { requestApproval } from './lib/actions/request-approval';
 import { terminateUserConnections } from './lib/actions/terminate-user-connections';
 import { triggerEvent } from './lib/actions/trigger-event';
 import { newWebhookEvent } from './lib/triggers/new-webhook-event';
@@ -30,6 +32,8 @@ export const hibira = createPiece({
     publishToInterests,
     publishToUsers,
     deletePushUser,
+    requestApproval,
+    getApproval,
   ],
   triggers: [newWebhookEvent],
 });
