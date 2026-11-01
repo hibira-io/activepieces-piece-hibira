@@ -35,7 +35,14 @@ export const hibiraClient = {
       path,
       query = {},
       body,
-    }: { method: 'GET' | 'POST' | 'DELETE'; path: string; query?: Record<string, string>; body?: unknown },
+      timeout,
+    }: {
+      method: 'GET' | 'POST' | 'DELETE';
+      path: string;
+      query?: Record<string, string>;
+      body?: unknown;
+      timeout?: number;
+    },
   ): Promise<T> {
     const a = props(auth);
     const fullPath = `/apps/${encodeURIComponent(a.appId)}${path}`;
@@ -47,6 +54,7 @@ export const hibiraClient = {
       queryParams,
       headers: raw === undefined ? {} : { 'Content-Type': 'application/json' },
       body: raw,
+      ...(timeout === undefined ? {} : { timeout }),
     });
     return response.body;
   },
