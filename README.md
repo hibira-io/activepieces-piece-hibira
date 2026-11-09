@@ -31,6 +31,7 @@ The connection is checked with a signed request when you save it.
 - **Disconnect User**: close every connection of a signed-in user.
 - **Send Push Notification to Interests**, **Send Push Notification to Users**, **Delete Push User**.
 - **Request Approval**, **Get Approval**: ask a person to approve or choose (2 to 4 choices, the first approves) through a Hibira-hosted answer link, optionally delivered by push or announced on a channel for the `@hibira-io/approvals` inbox. Request Approval can wait up to 9 minutes for the answer and returns `status` (`approved`, `rejected`, `pending`, `expired`) and `choice`; for longer waits, send the link and check later with Get Approval. Needs an app in a Hibira account.
+- **Get Waiting Room**, **Create or Update Waiting Room**, **Admit Visitors**, **Verify Waiting Room Pass**, **Delete Waiting Room**: run a Hibira waiting room from a flow. Open or pause a room on a schedule, admit a batch when a sale starts, or check a visitor's pass (`hibira_pass` or the `hibira_wr_<room>` cookie) from a checkout webhook; record `ticket_id` to allow one checkout per place in line. Empty fields in Create or Update keep their current values. Needs the waiting room add-on.
 
 ## Trigger
 

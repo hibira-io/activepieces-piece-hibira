@@ -11,6 +11,11 @@ import { publishToUsers } from './lib/actions/publish-to-users';
 import { requestApproval } from './lib/actions/request-approval';
 import { terminateUserConnections } from './lib/actions/terminate-user-connections';
 import { triggerEvent } from './lib/actions/trigger-event';
+import { admitWaitingRoom } from './lib/actions/admit-waiting-room';
+import { deleteWaitingRoom } from './lib/actions/delete-waiting-room';
+import { getWaitingRoom } from './lib/actions/get-waiting-room';
+import { updateWaitingRoom } from './lib/actions/update-waiting-room';
+import { verifyWaitingRoomPass } from './lib/actions/verify-waiting-room-pass';
 import { newWebhookEvent } from './lib/triggers/new-webhook-event';
 
 export { hibiraAuth };
@@ -34,6 +39,11 @@ export const hibira = createPiece({
     deletePushUser,
     requestApproval,
     getApproval,
+    getWaitingRoom,
+    updateWaitingRoom,
+    admitWaitingRoom,
+    verifyWaitingRoomPass,
+    deleteWaitingRoom,
   ],
   triggers: [newWebhookEvent],
 });
